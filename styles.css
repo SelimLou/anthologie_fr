@@ -1,52 +1,99 @@
 /* styles.css */
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
-  color: #333;
-}
-
-header {
-  background: linear-gradient(90deg, #1d3557, #457b9d);
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-header h1 {
-  font-size: 2.5rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  font-family: 'Georgia', serif;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #111;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 200vh; /* Plus grand pour scroller */
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-main {
-  padding: 20px;
-}
-
-section {
-  margin: 20px 0;
-}
-
-footer {
-  background-color: #1d3557;
-  color: white;
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 10px 0;
+  margin-top: 20vh;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.author {
+  font-size: 1.2rem;
+  margin: 10px 0 0 0;
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.arrow-container {
+  margin-top: 30px;
+}
+
+.arrow {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.arrow span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #111;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+  transform: translateX(-50%);
+}
+
+.arrow span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: 0.3s;
+  top: 10px;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: 0.6s;
+  top: 20px;
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+.poemes-section {
+  background-color: white;
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  margin-top: 50px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
